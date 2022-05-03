@@ -78,6 +78,19 @@ else()
     add_subdirectory_on_external_subdirs()
 endif()
 
+ly_add_target(
+    NAME changeValidateBug
+    NAMESPACE AZ
+    EXECUTABLE
+    FILES_CMAKE changeValidateBug_files.cmake
+    BUILD_DEPENDENCIES
+        PUBLIC
+            AZ::AzCore
+            3rdParty::Qt::Widgets
+            AZ::AzQtComponents
+            AZ::AzToolsFramework
+)
+
 ################################################################################
 # Post-processing
 ################################################################################
